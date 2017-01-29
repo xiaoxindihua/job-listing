@@ -32,9 +32,7 @@ class JobsController < ApplicationController
     end
   end
 
-  def index
-      @jobs = Job.where(:is_hidden => false).order("created_at DESC")
-  end
+
 
   def edit
     @job = Job.find(params[:id])
